@@ -7,12 +7,14 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="hero">
-      <sprite>sprites\spr_HwalkLR</sprite>
+      <sprite>sprites\spr_Hero</sprite>
     </sprites>
     <sprites name="environment">
       <sprite>sprites\spr_tree</sprite>
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_rock</sprite>
+      <sprite>sprites\spr_grass</sprite>
+      <sprite>sprites\spr_dirt</sprite>
     </sprites>
     <sprites name="NPC/enemy">
       <sprite>sprites\spr_NPC_oldman</sprite>
@@ -29,6 +31,18 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\script0.gml</script>
+  </scripts>
+  <objects name="objects">
+    <objects name="environment">
+      <object>objects\obj_groundtile</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_grass</object>
+      <object>objects\obj_road</object>
+    </objects>
+    <object>objects\obj_hero</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\rm_lvl_1</room>
     <room>rooms\rm_town_lvl2</room>
