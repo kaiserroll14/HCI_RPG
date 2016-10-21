@@ -17,8 +17,8 @@
     <sprites name="NPC/enemy">
       <sprite>sprites\spr_NPC_oldman</sprite>
       <sprite>sprites\spr_NPC_boy</sprite>
-      <sprite>sprites\spr_Blob</sprite>
       <sprite>sprites\spr_NPC_chick</sprite>
+      <sprite>sprites\spr_Blob</sprite>
     </sprites>
     <sprites name="Boss">
       <sprite>sprites\spr_BossID</sprite>
