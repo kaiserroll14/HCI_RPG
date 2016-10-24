@@ -14,7 +14,7 @@
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_rock</sprite>
       <sprite>sprites\spr_grass</sprite>
-      <sprite>sprites\spr_dirt</sprite>
+      <sprite>sprites\spr_dirtroad</sprite>
     </sprites>
     <sprites name="NPC/enemy">
       <sprite>sprites\spr_NPC_oldman</sprite>
@@ -29,19 +29,29 @@
       <sprite>sprites\spr_Fireball</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_grass</background>
+    <background>background\bg_dirtroad</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\script0.gml</script>
+    <script>scripts\object_tile_fill.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\obj_hero</object>
     <objects name="environment">
-      <object>objects\obj_groundtile</object>
       <object>objects\obj_wall</object>
       <object>objects\obj_grass</object>
-      <object>objects\obj_road</object>
+      <object>objects\obj_dirtroad</object>
+      <object>objects\obj_rock</object>
+      <object>objects\obj_tree</object>
     </objects>
-    <object>objects\obj_hero</object>
+    <objects name="NPC/enemy">
+      <object>objects\obj_blob</object>
+      <object>objects\obj_NPC_oldman</object>
+      <object>objects\obj_NPC_boy</object>
+      <object>objects\obj_NPC_chick</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_lvl_1</room>
@@ -53,7 +63,7 @@
     <rtf>help.rtf</rtf>
   </help>
   <TutorialState>
-    <IsTutorial>-1</IsTutorial>
+    <IsTutorial>0</IsTutorial>
     <TutorialName>C:\Users\codyj\AppData\Local\GameMaker-Studio\tutorials\My_First_Game\</TutorialName>
     <TutorialPage>0</TutorialPage>
   </TutorialState>
