@@ -15,6 +15,7 @@
       <sprite>sprites\spr_rock</sprite>
       <sprite>sprites\spr_grass</sprite>
       <sprite>sprites\spr_dirtroad</sprite>
+      <sprite>sprites\spr_water</sprite>
     </sprites>
     <sprites name="NPC/enemy">
       <sprite>sprites\spr_NPC_oldman</sprite>
@@ -32,10 +33,18 @@
   <backgrounds name="background">
     <background>background\bg_grass</background>
     <background>background\bg_dirtroad</background>
+    <background>background\bg_water</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\object_tile_fill.gml</script>
+    <scripts name="Helper Scripts">
+      <script>scripts\move.gml</script>
+      <script>scripts\object_tile_fill.gml</script>
+    </scripts>
+    <scripts name="Player States">
+      <script>scripts\move_state.gml</script>
+      <script>scripts\pause_state.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_hero</object>
@@ -45,6 +54,7 @@
       <object>objects\obj_dirtroad</object>
       <object>objects\obj_rock</object>
       <object>objects\obj_tree</object>
+      <object>objects\obj_water</object>
     </objects>
     <objects name="NPC/enemy">
       <object>objects\obj_blob</object>
@@ -63,7 +73,7 @@
     <rtf>help.rtf</rtf>
   </help>
   <TutorialState>
-    <IsTutorial>0</IsTutorial>
+    <IsTutorial>-1</IsTutorial>
     <TutorialName>C:\Users\codyj\AppData\Local\GameMaker-Studio\tutorials\My_First_Game\</TutorialName>
     <TutorialPage>0</TutorialPage>
   </TutorialState>

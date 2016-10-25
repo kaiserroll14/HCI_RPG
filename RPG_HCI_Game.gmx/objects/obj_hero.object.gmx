@@ -27,8 +27,11 @@
             <kind>1</kind>
             <string>/// Intialize Variables
 
-spd = 4;
-
+spd = 6;
+acc = 2;
+hsp = 0;
+vsp = 0;
+state = move_state;
 </string>
           </argument>
         </arguments>
@@ -51,32 +54,39 @@ spd = 4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Control Input
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="80">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Change the State of player
 
-var right = keyboard_check(vk_right);
-var left = keyboard_check(vk_left);
-var up = keyboard_check(vk_up);
-var down = keyboard_check(vk_down);
-
-if(right)
+if (state == pause_state)
 {
-    x+=spd;
+    state = move_state;
+}
+else
+{
+    state = pause_state;
 }
 
-if(left)
-{
-    x-=spd;
-}
-
-if(up)
-{
-    y-=spd;
-}
-
-if(down)
-{
-    y+=spd;
-}
 </string>
           </argument>
         </arguments>
