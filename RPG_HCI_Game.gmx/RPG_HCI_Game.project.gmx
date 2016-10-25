@@ -19,6 +19,7 @@
       <sprite>sprites\spr_dirtroad</sprite>
       <sprite>sprites\spr_water</sprite>
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_shop</sprite>
     </sprites>
     <sprites name="NPC/enemy">
       <sprite>sprites\spr_NPC_oldman</sprite>
@@ -56,6 +57,8 @@
       <object>objects\obj_tree</object>
       <object>objects\obj_wall</object>
       <object>objects\obj_water</object>
+      <object>objects\obj_shop</object>
+      <object>objects\obj_dirtrd</object>
     </objects>
     <objects name="NPC/enemy">
       <object>objects\obj_blob</object>
