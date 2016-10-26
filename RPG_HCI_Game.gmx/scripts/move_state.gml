@@ -2,6 +2,20 @@
 
 get_input();
 
+//get dash key
+if (dash)
+{
+    state = dash_state;
+    alarm[0] = room_speed/8
+}
+
+
+if (att)
+{
+    image_index = 0;
+    state = att_state;
+}
+
 //Get Direction
 dir = point_direction(0,0, xaxis, yaxis);
 

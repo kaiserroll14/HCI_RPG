@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_lifeform_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,14 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Intialize Variables
-phy_fixed_rotation = true;
+            <string>/// Initialize Variables
+event_inherited();
+
+//initialize stats
+hp = 20;
+
 spd = 6;
 acc = 2;
 hsp = 0;
 vsp = 0;
 len = 0;
 dir = 0;
+attacked = false;
 get_input();
 state = move_state;
 
@@ -63,7 +68,7 @@ tap_timer_count = tap_timer_reset;
             <kind>1</kind>
             <string>///set alarm for dash state
 
-
+state = move_state;
 </string>
           </argument>
         </arguments>
@@ -87,7 +92,36 @@ tap_timer_count = tap_timer_reset;
           <argument>
             <kind>1</kind>
             <string>///movement for player
+event_inherited(); //inherite events from parents step
 script_execute(state);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///change back to normal
+if(state == att_state)
+{
+    state = move_state;
+    attacked = false;
+}
 </string>
           </argument>
         </arguments>
@@ -158,7 +192,7 @@ game_end();
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
+  <PhysicsObjectLinearDamping>5</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>

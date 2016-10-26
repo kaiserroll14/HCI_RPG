@@ -11,6 +11,10 @@
       <sprite>sprites\spr_heroleft</sprite>
       <sprite>sprites\spr_heroright</sprite>
       <sprite>sprites\spr_heroup</sprite>
+      <sprite>sprites\spr_hero_attup</sprite>
+      <sprite>sprites\spr_hero_attdown</sprite>
+      <sprite>sprites\spr_hero_attright</sprite>
+      <sprite>sprites\spr_hero_attleft</sprite>
     </sprites>
     <sprites name="environment">
       <sprite>sprites\spr_tree</sprite>
@@ -33,6 +37,7 @@
     <sprites name="magic/effects">
       <sprite>sprites\spr_Fireball</sprite>
     </sprites>
+    <sprite>sprites\spr_damage</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -42,12 +47,15 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\get_input.gml</script>
     <scripts name="Player States">
+      <script>scripts\att_state.gml</script>
       <script>scripts\move_state.gml</script>
       <script>scripts\dash_state.gml</script>
       <script>scripts\pause_state.gml</script>
-      <script>scripts\script4.gml</script>
+    </scripts>
+    <scripts name="Helper Scripts">
+      <script>scripts\tile_fill_object.gml</script>
+      <script>scripts\get_input.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -59,6 +67,7 @@
       <object>objects\obj_water</object>
       <object>objects\obj_shop</object>
       <object>objects\obj_dirtrd</object>
+      <object>objects\obj_grass</object>
     </objects>
     <objects name="NPC/enemy">
       <object>objects\obj_blob</object>
@@ -68,10 +77,13 @@
     </objects>
     <objects name="helper objects">
       <object>objects\obj_view</object>
+      <object>objects\obj_dash_effect</object>
+      <object>objects\obj_lifeform_parent</object>
+      <object>objects\obj_damage</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_lvl_1</room>
+    <room>rooms\lvl_1</room>
     <room>rooms\rm_town_lvl2</room>
     <room>rooms\rm_lvl_3</room>
     <room>rooms\rm_boss</room>

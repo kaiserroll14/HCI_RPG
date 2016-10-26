@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Create tiles
+            <string>///Fill with tile and destroy instance
 
-object_tile_fill(id, bg_grass);
+tile_fill_object(id, bg_grass);
 instance_destroy();
 </string>
           </argument>
