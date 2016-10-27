@@ -79,7 +79,7 @@
     <rtf>help.rtf</rtf>
   </help>
   <TutorialState>
-    <IsTutorial>0</IsTutorial>
+    <IsTutorial>-1</IsTutorial>
     <TutorialName>C:\Users\codyj\AppData\Local\GameMaker-Studio\tutorials\My_First_Game\</TutorialName>
     <TutorialPage>0</TutorialPage>
   </TutorialState>

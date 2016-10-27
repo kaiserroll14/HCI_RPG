@@ -86,10 +86,11 @@ if(hp&lt;0)
 }
 
 //regen stamina
-if(stamina &lt;= maxstamina &amp;&amp; alarm[0] == -1)
+if(stamina &lt; maxstamina &amp;&amp; alarm[0] == -1)
 {
     stamina++;
 }
+
 </string>
           </argument>
         </arguments>
@@ -113,8 +114,9 @@ if(stamina &lt;= maxstamina &amp;&amp; alarm[0] == -1)
           <argument>
             <kind>1</kind>
             <string>///Draw the stats
-draw_text(32, 48, "Stamina: " + string(hp) + "/" + string(maxhp));
-draw_text(32, 32, "HP: " + string(stamina) + "/" + string(maxstamina));
+draw_set_colour(c_white);
+draw_text(32, 32, "HP: " + string(hp) + "/" + string(maxhp));
+draw_text(32, 48, "Stamina: " + string(stamina) + "/" + string(maxstamina));
 draw_text(32, 16, "LVL: " + string(lvl));
 
 </string>

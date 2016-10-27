@@ -10,7 +10,7 @@ if (dash && obj_player_stats.stamina >= DASH_COST)
     state = dash_state;
     alarm[0] = room_speed/8;
     obj_player_stats.stamina -= DASH_COST;
-    obj_player_stats.alarm[0] = room_speed;
+    obj_player_stats.alarm[0] = room_speed*3;
 }
 
 
